@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>공지사항 작성</title>
+</head>
+<body>
+<div>
+    <form th:action="@{'/notice/modify/' +${notice.noticeNo}}" method="post" th:object="${notice}">
+        <input type="hidden" name="_method" value="put" />
+        <input type="hidden" name="id" th:value="${notice.noticeNo}" />
+    <table>
+        <tr>
+            <td>제목</td>
+            <td><input th:type="text" name="noticeTitle" th:value="*{noticeTitle}"></td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <textarea name="noticeContent" th:field="*{noticeContent}"></textarea>
+        </tr>
+        <tr>
+
+        </tr>
+    </table>
+        <p th:text="'noticeImportant: ' + ${notice.noticeImportant}"></p>
+        <fieldset>
+            <input type="radio" name="noticeImportant" th:value="N" id="impoZero" th:checked="${notice.noticeImportant eq 'N'}">
+            <label for="impoZero">일반공지</label>
+            <input type="radio" name="noticeImportant" th:value="Y" id="impoOne" th:checked="${notice.noticeImportant eq 'Y'}">
+            <label for="impoOne">중요공지</label>
+        </fieldset>
+        <button type="submit">작성</button>
+    </form>
+</div>
+</body>
+</html>
+

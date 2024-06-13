@@ -1,0 +1,143 @@
+.redColor{
+    color:red;
+
+}
+
+.registerForm{
+    padding: 4.6rem 4rem;
+    border: 1px solid #d9dbe1;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    margin: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.forms [type="text"], .forms [type="password"] , .forms [type="email"]{
+    height: 4.8rem;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #0cb7f9;
+    border-radius: 0;
+    color: #000;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    transition: border .2s .3s, color .2s .3s, box-shadow .2s .3s;
+}
+.registerForm_value{
+    flex: 8;
+}
+
+.helper{
+    margin-top: .4rem;
+    display: block;
+    margin-top: .2rem;
+    color: #00256c;
+    line-height: 1.58;
+    font-size: 13px;
+
+}
+
+.forms-option{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+body{
+    font-family: Noto Sans, sans-serif, Verdana, Arial;
+}
+
+.registerForm{
+    width: 80%;
+    margin:auto;
+}
+
+.registerForm_key{
+    margin: 2rem 4rem 0 0;
+}
+
+.field_key{
+    margin: 2rem 0 0 0;
+}
+
+.forms{
+    flex: 1;
+}
+.forms-option [type="button"]{
+    border: 1px solid #00b8ff;
+    border-radius: 10px;
+    width: 120px;
+    height: 35px;
+}
+input:focus{
+    outline: none;
+}
+
+input{
+
+}
+
+.form-check-input:checked {
+    background-color: #afcffd;
+    border-color: #afcffd;
+}
+
+.field_key ul{
+    list-style: none;
+    display: none;
+    padding: 0;
+    font-size: 1.25rem;
+}
+
+.field_key ul li{
+    padding-right: 3rem;
+}
+
+.register-submit{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem;
+}
+
+#emailCheckInputContainer{
+    display:flex;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+.register-submit button, #emailCheckInputContainer button{
+    border: #83d6f64f;
+    background-color: #83d6f64f;
+    width: 100px;
+    height: 30px;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin: 0 0 0 0.5rem
+}
+
+.newId{
+    color : #0027a2;
+    display : none;
+}
+.oldId{
+    color : red;
+    display : none;
+}
+
+#emailCheckInputContainer [type="text"]{
+    border: 1px solid #00b8ff;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+
+}

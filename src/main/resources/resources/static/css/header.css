@@ -1,0 +1,36 @@
+a{
+    color:black;
+    text-decoration: none;
+}
+
+.nav-text{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.container{
+    max-width: 100%;
+    --bs-gutter-x: 0;
+}
+
+header{
+width: 80%;
+margin: auto;
+}
+
+.dropbox {
+display: grid;
+}
+
+button{
+background-color: white;
+border: none;
+}
+
+.col-lg-8{
+width: 15rem;
+}
+
+small{
+margin: 0.5rem 1.5rem 0.5rem 0.1rem;
+
+}

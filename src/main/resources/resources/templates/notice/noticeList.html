@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>공지사항</title>
+</head>
+<body>
+<h1>공지사항 목록</h1>
+<table>
+    <thead>
+    <tr>
+        <th>아이디</th>
+        <th>제목</th>
+        <th>조회수</th>
+        <th>작성일</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="notice : ${noticePage.content}">
+        <td th:text="${notice.noticeNo}">아이디</td>
+        <td><a th:href="@{'/notice/noticeContent/' + ${notice.noticeNo}}"><span th:text="${notice.noticeTitle}"></span></a></td>
+        <td th:text="${notice.noticeViewCount}"></td>
+        <td th:text="${#dates.format(notice.noticeCreateDate, 'yyyy-MM-dd')}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <span th:text="'페이지 ' + ${noticePage.number + 1} + ' / ' + ${noticePage.totalPages}"></span>
+    <a th:if="${noticePage.hasPrevious()}" th:href="@{(page=${noticePage.number - 1})}">이전</a>
+    <a th:if="${noticePage.hasNext()}" th:href="@{(page=${noticePage.number + 1})}">다음</a>
+</div>
+<div>
+    <a href="/notice/write"><button>공지 작성</button></a>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script th:src="@{/js/notice/notice.js}"></script>
+</html>

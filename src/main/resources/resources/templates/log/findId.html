@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/sendMail/id" id="findForm" method="post">
+    <fieldset>
+        <legend class="screen_out">아이디 찾기 폼</legend>
+
+        <div class="box email">
+            <label for="userEmail">이메일</label>
+            <input type="text" id="userEmail" name="userEmail" autofocus autocomplete="off" required />
+        </div>
+
+
+        <div class="box captcha">
+            <div class="loading"></div>
+
+            <label for="captcha">자동 방지 코드</label>
+            <input type="text" id="captcha" name="captcha" autocomplete="off" required />
+            <img src="/captcha" alt="캡차 이미지" title="클릭시 새로고침" />
+        </div>
+
+        <div class="box btn">
+            <button type="submit" class="btn join">
+                이메일 전송
+            </button>
+        </div>
+
+    </fieldset>
+</form>
+</body>
+</html>

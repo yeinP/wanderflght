@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/css/header.css" rel="stylesheet" />
+    <link href="/css/home.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div th:replace="home/header.html :: fragment-header"></div>
+<div class="home_air_service" style="background-image: url('/img/home/home_center.png');">
+    <div class="main_booking">
+        <div class="main_booking_inner">
+            <ul  role="tablist" aria-labelledby="booking-widget" aria-orientation="horizontal" class="booking-list">
+                <li  role="presentation" class="booking-list-item -active">
+                    <button  type="button" role="tab" id="tab_0" data-click-area="Main-Booking" data-click-name="Book Flights" ep_data_click_area="Main-Booking" ep_data_click_name="Book Flights" aria-controls="panel_0" class="booking-button" aria-selected="true" tabindex="0">
+                        <span class="booking-list-txt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                                <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                            </svg>
+                        </span>
+                        <span> 항공권 예매</span>
+                    </button>
+                </li>
+                <li role="presentation" class="booking-list-item">
+                    <button type="button" role="tab" data-click-area="Main-Booking" data-click-name="Find Trips" aria-controls="panel_1" ep_data_click_area="Main-Booking" ep_data_click_name="Find Trips" class="booking-button" id="mainTabResvNoLogin" aria-selected="false" tabindex="-1">
+                        <span class="booking-list-txt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </span>
+                        <span>예약 조회</span>
+                    </button></li>
+                <li role="presentation" class="booking-list-item">
+                    <button type="button" role="tab" data-click-area="Main-Booking" data-click-name="Check-In" aria-controls="panel_2" ep_data_click_area="Main-Booking" ep_data_click_name="Check-In" class="booking-button" id="mainTabCheckinNoLogin" aria-selected="false" tabindex="-1">
+                        <span class="booking-list-txt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" fill="currentColor" class="bi bi-ticket-perforated" viewBox="0 0 16 16">
+                                <path d="M4 4.85v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9z"/>
+                                <path d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3zM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9z"/>
+                            </svg></span>
+                        <span>체크인</span>
+                    </button>
+                </li>
+                <li role="presentation" class="booking-list-item">
+                    <button type="button" role="tab" id="tab_3" data-click-area="Main-Booking" data-click-name="Flight Status" aria-controls="panel_3" ep_data_click_area="Main-Booking" ep_data_click_name="Flight Status" class="booking-button" aria-selected="false" tabindex="-1">
+                        <span class="booking-list-txt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                            </svg>
+                        </span>
+                        <span>출도착 조회</span>
+                    </button>
+                </li>
+            </ul>
+            <div role="tabpanel" class="booking_panel -active">
+                <div class="quickbook">
+                    <div class="booking-panel-side-wrap">
+                        <div class="booking-widget__tabs" aria-label="예매 종류">
+                            <div class="booking_panel-kind">
+                                <span>마일리지 예매</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr class="d-lg-none">
+                        <div class="booking-type">
+                            <div role="group" class="bookings-type-item" aria-label="여행 타입">
+                                <div class="bookings-type-item">
+                                    <div class="selection">
+                                        <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+                                        <label class="btn" for="option5">왕복</label>
+                                    </div>
+                                </div>
+                                <div class="bookings-type-item">
+                                    <div class="selection">
+                                        <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+                                        <label class="btn" for="option6">편도</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="panelNormalTrip" class="quickbookings__panel -active">
+
+
+                            <div class="quickbookings__aligner">
+                                <div class="quickbookings__separate -itinerary">
+                                   <div class="quickbookings__aligner-inner ng-star-inserted">
+                                            <button type="button" id="departureBtnfd362df9d6c07e9c425224d3cd76f4b3" class="quickbookings__location _has-dialog -from ng-star-inserted">
+                                                <span  class="_hidden ng-star-inserted">출발지&nbsp;</span>
+                                                <span class="quickbookings__code">SEL</span>
+                                                <span class="quickbookings__airport ng-star-inserted">
+                                                    &nbsp;서울 </span>
+                                            </button>
+                                            <button type="button" id="destinationBtnfd362df9d6c07e9c425224d3cd76f4b3" class="quickbookings__location _has-dialog -to -off ng-star-inserted">
+                                                <span class="quickbookings__code">To</span>
+                                                <span class="quickbookings__airport ng-star-inserted"><!---->&nbsp;도착지 </span>
+                                            </button>
+                                            <button type="button" disabled="" class="quickbookings__swap ng-star-inserted">출발지와 도착지 바꾸기</button>
+
+                                            <div aria-live="polite" class="_hidden ng-star-inserted" id="swapMsgfd362df9d6c07e9c425224d3cd76f4b3">
+
+                                            </div>
+                                        </div>
+
+                                    <div  class="booking-widget__message message">
+                                        <div aria-live="assertive">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  class="quickbookings__separate -date">
+                                    <p class="quickbookings__label label _mo-hidden">출발일&nbsp;</p>
+                                    <div class="forms">
+                                        <button type="button" aria-expanded="false" class="quickbookings__datepicker" id="datefd362df9d6c07e9c425224d3cd76f4b3" aria-controls="date-controlsfd362df9d6c07e9c425224d3cd76f4b3">
+                                            <span class="_hidden">출발일&nbsp;</span>
+                                            <span class="quickbookings__date -off ng-star-inserted">
+                                                <span class="-from"> 가는 날 </span>
+                                                <span aria-hidden="true" class="-wave ng-star-inserted">~</span>
+                                                <span class="-to ng-star-inserted">오는 날</span><!----><!---->
+                                            </span><!----><!---->
+                                        </button><!---->
+                                    </div>
+                                    <div aria-hidden="true" id="date-controlsfd362df9d6c07e9c425224d3cd76f4b3"></div>
+                                </div>
+                                <div class="quickbookings__separate -passenger">
+                                    <p class="quickbookings__label label">탑승객&nbsp;</p>
+                                    <div class="forms">
+                                        <button type="button" aria-expanded="false" class="quickbookings__passenger" id="passengerfd362df9d6c07e9c425224d3cd76f4b3" aria-controls="passenger-controlsfd362df9d6c07e9c425224d3cd76f4b3">
+                                            <span class="_hidden">탑승객&nbsp;</span>
+                                            <span class="quickbookings__select-data">성인 1명</span>
+                                        </button></div>
+                                    <div  aria-hidden="true" id="passenger-controlsfd362df9d6c07e9c425224d3cd76f4b3"></div>
+                                </div>
+                                <div  class="quickbookings__separate -seats">
+                                    <p  class="quickbookings__label label">좌석 등급&nbsp;</p>
+                                    <div class="forms">
+                                        <button type="button" data-click-area="Main-Booking" data-click-name="Request seat upgrade" ep_data_click_area="Main-Booking" ep_data_click_name="Request seat upgrade" aria-expanded="false" class="quickbookings__seatclass" id="seatClassfd362df9d6c07e9c425224d3cd76f4b3" aria-controls="seatClass-controlsfd362df9d6c07e9c425224d3cd76f4b3">
+                                        <span class="_hidden">좌석 등급&nbsp;</span>
+                                            <span _ngcontent-ooe-c54="" class="quickbookings__select-data -off">선택하세요.</span>
+                                    </button>
+                                    </div>
+                                    <div aria-hidden="true" id="seatClass-controlsfd362df9d6c07e9c425224d3cd76f4b3"></div>
+                                </div><!---->
+                                <div  class="quickbookings__separate -search">
+                                    <button  type="button" data-click-area="Main-Booking" data-click-name="Book Flights_Search" id="quickbookingOnSearch" class="booking-widget__find">항공편 검색</button>
+                                </div>
+                            </div>
+                            <div class="quickbookings__text _mo-hidden"><!----></div>
+                    </div>
+                    <div id="panelBonusTrip" class="quickbookings__panel">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
